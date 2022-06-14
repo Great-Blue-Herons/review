@@ -90,9 +90,9 @@ CREATE INDEX IF NOT EXISTS index_prod_id
     (review_id ASC NULLS LAST)
     TABLESPACE pg_default;
 
-    CREATE TABLE IF NOT EXISTS public.characteristics
+    CREATE TABLE public.characteristics
 (
-    id integer NOT NULL DEFAULT nextval('characteristics_id'::regclass),
+    id integer NOT NULL DEFAULT nextval('characteristics_id_seq'::regclass),
     product_id integer,
     name character varying COLLATE pg_catalog."default",
     CONSTRAINT characteristics_pkey PRIMARY KEY (id)
